@@ -28,7 +28,7 @@ pub enum Commands {
 pub struct SeiArgs {
     /// Pass the path to the directory or file you wish to convert.
     #[arg(short, long)]
-    path: PathBuf,
+    pub path: PathBuf,
 }
 
 #[derive(Args, Debug)]
@@ -36,7 +36,7 @@ pub struct SeiArgs {
 pub struct MetArgs {
     /// Pass the path to the directory or file you wish to convert.
     #[arg(short, long)]
-    path: PathBuf,
+    pub path: PathBuf,
 }
 
 #[derive(Args, Debug)]
@@ -44,5 +44,5 @@ pub struct MetArgs {
 pub struct AstArgs {
     /// Pass the path to the directory or file you wish to convert.
     #[arg(short, long)]
-    path: PathBuf,
+    pub path: PathBuf,
 }
