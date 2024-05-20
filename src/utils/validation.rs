@@ -1,7 +1,7 @@
-use std::path::PathBuf;
+use std::path::Path;
 
 /// Enum representing the type of a path.
-#[derive(Debug)]
+#[derive(Debug, PartialEq)]
 pub enum PathType {
     File,
     Directory,
@@ -17,7 +17,7 @@ pub enum PathType {
 /// # Returns
 ///
 /// * `PathType` - The type of the path: `File`, `Directory`, or `NotFound`.
-pub fn is_dir_or_file(path: &PathBuf) -> PathType {
+pub fn is_dir_or_file(path: &Path) -> PathType {
     match path {
         path if path.is_dir() => PathType::Directory,
         path if path.is_file() => PathType::File,
